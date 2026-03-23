@@ -24,6 +24,15 @@ export default function Home() {
           />
         </div>
 
+        {/* Logo watermark */}
+        <div className="absolute top-32 right-8 opacity-10 pointer-events-none hidden lg:block">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/Group1(1)_b8172d56.png"
+            alt=""
+            className="h-48 w-auto"
+          />
+        </div>
+
         <div className="relative z-10 container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
@@ -276,7 +285,11 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="font-bold mb-4 font-mono">Zuri Capital</h4>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/Group1(1)_b8172d56.png"
+                alt="Zuri Capital"
+                className="h-12 w-auto mb-4"
+              />
               <p className="text-[#A0A0A0] text-sm">
                 Crédito rápido, seguro e inteligente para você.
               </p>

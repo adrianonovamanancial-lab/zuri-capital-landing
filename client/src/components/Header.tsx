@@ -10,14 +10,15 @@ export default function Header({ onSimulateClick }: HeaderProps) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-[#0B0F1A]/95 backdrop-blur-md border-b border-[#C6D600]/10">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C6D600] to-[#6B7F00] flex items-center justify-center">
-            <span className="text-[#0B0F1A] font-bold text-sm font-mono">Z</span>
-          </div>
-          <span className="font-bold font-mono text-lg hidden sm:inline">Zuri</span>
-        </div>
+        <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/Group1(1)_b8172d56.png"
+            alt="Zuri Capital"
+            className="h-10 w-auto"
+          />
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
