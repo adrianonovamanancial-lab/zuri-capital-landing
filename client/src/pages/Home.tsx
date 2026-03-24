@@ -13,7 +13,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0B0F1A] text-white overflow-hidden">
       <Header onSimulateClick={() => setIsChatOpen(true)} />
 
-      {/* Hero Section */}
+      {/* Hero Section - Refined */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
         {/* Background with geometric lines */}
         <div className="absolute inset-0 opacity-30">
@@ -24,54 +24,34 @@ export default function Home() {
           />
         </div>
 
-        {/* Logo watermark */}
-        <div className="absolute top-32 right-8 opacity-10 pointer-events-none hidden lg:block">
-          <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/Group1(1)_b8172d56.png"
-            alt=""
-            className="h-48 w-auto"
-          />
-        </div>
+        <div className="relative z-10 container mx-auto px-4 max-w-4xl">
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="animate-fade-in-slide-up">
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6" style={{ letterSpacing: '-0.5px', fontWeight: 700 }}>
+                Simule e contrate
+                <br className="hidden lg:block" />
+                <span className="text-[#C6D600]">seu crédito agora</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-[#B0B0B0] leading-relaxed max-w-2xl" style={{ fontWeight: 400, opacity: 0.85 }}>
+                Resposta imediata, sem burocracia e com aprovação rápida. Tudo 100% digital e seguro.
+              </p>
+            </div>
 
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Content */}
-            <div className="space-y-8">
-              <div className="animate-fade-in-slide-up">
-                <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-4 font-mono">
-                  Simule e contrate seu
-                  <span className="text-[#C6D600] block">crédito agora</span>
-                </h1>
-                <p className="text-xl text-[#A0A0A0] leading-relaxed">
-                  Resposta imediata, sem burocracia e com aprovação rápida. Tudo 100% digital e seguro.
-                </p>
-              </div>
-
+            <div className="flex flex-col lg:flex-row items-center gap-8 pt-4">
               <CTAButton onClick={() => setIsChatOpen(true)} size="lg">
                 Simular agora
               </CTAButton>
 
               {/* Trust indicators */}
-              <div className="flex items-center gap-4 pt-4">
+              <div className="flex items-center gap-4">
                 <div className="flex -space-x-2">
                   <div className="w-10 h-10 rounded-full bg-[#C6D600] border-2 border-[#0B0F1A]" />
                   <div className="w-10 h-10 rounded-full bg-[#6B7F00] border-2 border-[#0B0F1A]" />
                   <div className="w-10 h-10 rounded-full bg-[#3F4A00] border-2 border-[#0B0F1A]" />
                 </div>
-                <p className="text-sm text-[#A0A0A0]">
+                <p className="text-sm text-[#A0A0A0]" style={{ fontWeight: 400 }}>
                   <span className="text-[#C6D600] font-semibold">+2.500</span> clientes já aprovados
                 </p>
-              </div>
-            </div>
-
-            {/* Right: Phone Mockup */}
-            <div className="hidden lg:flex justify-center items-center animate-float">
-              <div className="relative">
-                <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/phone-mockup-illustration-RJ5PqUvfFxNMa6UzeUtSMu.webp"
-                  alt="Phone Mockup"
-                  className="w-80 h-auto drop-shadow-2xl"
-                />
               </div>
             </div>
           </div>
@@ -79,16 +59,16 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-[#C6D600] rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-[#C6D600] rounded-full animate-pulse" />
-          </div>
+          <svg className="w-6 h-6 text-[#C6D600]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
       {/* Value Proposition */}
       <section id="features" className="py-20 bg-[#1a1f2e] border-t border-[#C6D600]/10">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 font-mono">
+          <h2 className="text-4xl font-bold text-center mb-16" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
             Por que escolher a <span className="text-[#C6D600]">Zuri Capital</span>
           </h2>
 
@@ -115,73 +95,71 @@ export default function Home() {
       {/* How It Works */}
       <section id="how-it-works" className="py-20 bg-[#0B0F1A]">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 font-mono">
+          <h2 className="text-4xl font-bold text-center mb-16" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
             Como <span className="text-[#C6D600]">funciona</span>
           </h2>
 
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-8">
-              {/* Step 1 */}
-              <div className="flex gap-6 items-start">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#C6D600] text-[#0B0F1A] font-bold text-lg font-mono">
-                    1
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold mb-2 font-mono">Faça sua simulação</h3>
-                  <p className="text-[#A0A0A0]">
-                    Abra o chat, informe o valor que precisa e escolha o prazo. Leva menos de 2 minutos.
-                  </p>
+          <div className="max-w-3xl mx-auto space-y-8">
+            {/* Step 1 */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#C6D600] text-[#0B0F1A] font-bold text-lg">
+                  1
                 </div>
               </div>
-
-              {/* Divider */}
-              <div className="flex justify-center">
-                <div className="w-1 h-8 bg-gradient-to-b from-[#C6D600] to-transparent" />
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex gap-6 items-start">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#C6D600] text-[#0B0F1A] font-bold text-lg font-mono">
-                    2
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold mb-2 font-mono">Receba sua proposta</h3>
-                  <p className="text-[#A0A0A0]">
-                    Veja as melhores opções de crédito com taxas e prazos personalizados para você.
-                  </p>
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div className="flex justify-center">
-                <div className="w-1 h-8 bg-gradient-to-b from-[#C6D600] to-transparent" />
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex gap-6 items-start">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#C6D600] text-[#0B0F1A] font-bold text-lg font-mono">
-                    3
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold mb-2 font-mono">Acompanhe tudo pelo app</h3>
-                  <p className="text-[#A0A0A0]">
-                    Envie documentos, acompanhe sua aprovação e finalize a contratação com segurança.
-                  </p>
-                </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2" style={{ fontWeight: 600 }}>Faça sua simulação</h3>
+                <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
+                  Abra o chat, informe o valor que precisa e escolha o prazo. Leva menos de 2 minutos.
+                </p>
               </div>
             </div>
 
-            <div className="mt-12 text-center">
-              <CTAButton onClick={() => setIsChatOpen(true)} size="md">
-                Começar agora
-              </CTAButton>
+            {/* Divider */}
+            <div className="h-8 flex justify-center">
+              <div className="w-1 bg-gradient-to-b from-[#C6D600] to-transparent" />
             </div>
+
+            {/* Step 2 */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#C6D600] text-[#0B0F1A] font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2" style={{ fontWeight: 600 }}>Receba sua proposta</h3>
+                <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
+                  Veja as melhores opções de crédito com taxas e prazos personalizados para você.
+                </p>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="h-8 flex justify-center">
+              <div className="w-1 bg-gradient-to-b from-[#C6D600] to-transparent" />
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex gap-6">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#C6D600] text-[#0B0F1A] font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2" style={{ fontWeight: 600 }}>Acompanhe tudo pelo app</h3>
+                <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
+                  Envie documentos, acompanhe sua aprovação e finalize a contratação com segurança.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <CTAButton onClick={() => setIsChatOpen(true)} size="md">
+              Começar agora
+            </CTAButton>
           </div>
         </div>
       </section>
@@ -193,53 +171,47 @@ export default function Home() {
             {/* Image */}
             <div className="hidden lg:flex justify-center">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/security-pattern-MeTBiFDfJdxXbTthXnipxb.webp"
-                alt="Security"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/security-pattern-8Tz7hJ9kL2mN4pQ5rS6tU.webp"
+                alt="Segurança"
                 className="w-full max-w-md"
               />
             </div>
 
             {/* Content */}
             <div>
-              <h2 className="text-4xl font-bold mb-8 font-mono">
+              <h2 className="text-4xl font-bold mb-8" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
                 Segurança em <span className="text-[#C6D600]">primeiro lugar</span>
               </h2>
 
               <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
                     <Lock className="text-[#C6D600]" size={24} />
+                    <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Criptografia de Dados</h3>
                   </div>
-                  <div>
-                    <h3 className="font-bold mb-2">Criptografia de Dados</h3>
-                    <p className="text-[#A0A0A0]">
-                      Seus dados são protegidos com a mais alta tecnologia de criptografia do mercado.
-                    </p>
-                  </div>
+                  <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
+                    Seus dados são protegidos com a mais alta tecnologia de criptografia do mercado.
+                  </p>
                 </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
                     <CheckCircle className="text-[#C6D600]" size={24} />
+                    <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Conformidade LGPD</h3>
                   </div>
-                  <div>
-                    <h3 className="font-bold mb-2">Conformidade LGPD</h3>
-                    <p className="text-[#A0A0A0]">
-                      Estamos em total conformidade com a Lei Geral de Proteção de Dados.
-                    </p>
-                  </div>
+                  <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
+                    Estamos em total conformidade com a Lei Geral de Proteção de Dados.
+                  </p>
                 </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <Smartphone className="text-[#C6D600]" size={24} />
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <Lock className="text-[#C6D600]" size={24} />
+                    <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Ambiente Seguro</h3>
                   </div>
-                  <div>
-                    <h3 className="font-bold mb-2">Ambiente Seguro</h3>
-                    <p className="text-[#A0A0A0]">
-                      Infraestrutura de classe empresarial com certificações internacionais.
-                    </p>
-                  </div>
+                  <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
+                    Infraestrutura de classe empresarial com certificações internacionais.
+                  </p>
                 </div>
               </div>
             </div>
@@ -250,10 +222,10 @@ export default function Home() {
       {/* App Download Section */}
       <section className="py-20 bg-[#0B0F1A] border-t border-[#C6D600]/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 font-mono">
+          <h2 className="text-4xl font-bold mb-6" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
             Baixe o app <span className="text-[#C6D600]">Zuri</span>
           </h2>
-          <p className="text-[#A0A0A0] max-w-2xl mx-auto mb-12 text-lg">
+          <p className="text-[#A0A0A0] max-w-2xl mx-auto mb-12 text-lg" style={{ fontWeight: 400 }}>
             O app Zuri é usado para acompanhar sua proposta, enviar documentos e finalizar sua contratação com segurança. Disponível em iOS e Android.
           </p>
 
@@ -272,7 +244,7 @@ export default function Home() {
               className="inline-flex items-center justify-center gap-2 bg-white text-[#0B0F1A] font-bold px-8 py-4 rounded-lg hover:bg-[#E8E8E8] transition-all duration-300"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3.2 5.5c-.1 0-.2.1-.2.2v13c0 .1.1.2.2.2h17.6c.1 0 .2-.1.2-.2v-13c0-.1-.1-.2-.2-.2H3.2zm9.6 12.1L3.6 6.3h16.8L12.8 17.6z" />
+                <path d="M3.609 1.814L13.792 12 3.609 22.186a1.5 1.5 0 0 0 1.06 2.561h.127c.563 0 1.084-.3 1.359-.783l10.646-11.964L5.155 1.036A1.5 1.5 0 0 0 3.609 1.814z" />
               </svg>
               Google Play
             </a>
@@ -290,38 +262,38 @@ export default function Home() {
                 alt="Zuri Capital"
                 className="h-12 w-auto mb-4"
               />
-              <p className="text-[#A0A0A0] text-sm">
+              <p className="text-[#A0A0A0] text-sm" style={{ fontWeight: 400 }}>
                 Crédito rápido, seguro e inteligente para você.
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-4 font-mono">Links</h4>
+              <h4 className="font-bold mb-4" style={{ fontWeight: 600 }}>Links</h4>
               <ul className="space-y-2 text-[#A0A0A0] text-sm">
-                <li><a href="#" className="hover:text-[#C6D600] transition-colors">Sobre</a></li>
-                <li><a href="#" className="hover:text-[#C6D600] transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-[#C6D600] transition-colors">Contato</a></li>
+                <li><a href="#" className="hover:text-[#C6D600] transition-colors" style={{ fontWeight: 400 }}>Sobre</a></li>
+                <li><a href="#" className="hover:text-[#C6D600] transition-colors" style={{ fontWeight: 400 }}>Blog</a></li>
+                <li><a href="#" className="hover:text-[#C6D600] transition-colors" style={{ fontWeight: 400 }}>Contato</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4 font-mono">Legal</h4>
+              <h4 className="font-bold mb-4" style={{ fontWeight: 600 }}>Legal</h4>
               <ul className="space-y-2 text-[#A0A0A0] text-sm">
-                <li><a href="#" className="hover:text-[#C6D600] transition-colors">Termos</a></li>
-                <li><a href="#" className="hover:text-[#C6D600] transition-colors">Privacidade</a></li>
-                <li><a href="#" className="hover:text-[#C6D600] transition-colors">Cookies</a></li>
+                <li><a href="#" className="hover:text-[#C6D600] transition-colors" style={{ fontWeight: 400 }}>Termos</a></li>
+                <li><a href="/privacy" className="hover:text-[#C6D600] transition-colors" style={{ fontWeight: 400 }}>Política de Privacidade</a></li>
+                <li><a href="#" className="hover:text-[#C6D600] transition-colors" style={{ fontWeight: 400 }}>Cookies</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-4 font-mono">Suporte</h4>
+              <h4 className="font-bold mb-4" style={{ fontWeight: 600 }}>Suporte</h4>
               <ul className="space-y-2 text-[#A0A0A0] text-sm">
-                <li><a href="#" className="hover:text-[#C6D600] transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-[#C6D600] transition-colors">Ajuda</a></li>
-                <li><a href="#" className="hover:text-[#C6D600] transition-colors">Suporte</a></li>
+                <li><a href="#" className="hover:text-[#C6D600] transition-colors" style={{ fontWeight: 400 }}>FAQ</a></li>
+                <li><a href="#" className="hover:text-[#C6D600] transition-colors" style={{ fontWeight: 400 }}>Ajuda</a></li>
+                <li><a href="#" className="hover:text-[#C6D600] transition-colors" style={{ fontWeight: 400 }}>Suporte</a></li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-[#C6D600]/10 pt-8">
-            <p className="text-[#A0A0A0] text-sm text-center">
+            <p className="text-[#A0A0A0] text-sm text-center" style={{ fontWeight: 400 }}>
               © 2026 Zuri Capital. Todos os direitos reservados. | Crédito responsável. Consulte sempre as condições antes de contratar.
             </p>
           </div>
