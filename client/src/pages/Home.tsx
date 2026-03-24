@@ -39,21 +39,27 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-center gap-8 pt-4">
+            <div className="flex flex-col gap-6 pt-4">
               <CTAButton onClick={() => setIsChatOpen(true)} size="lg">
                 Simular agora
               </CTAButton>
 
-              {/* Trust indicators */}
-              <div className="flex items-center gap-4">
-                <div className="flex -space-x-2">
-                  <div className="w-10 h-10 rounded-full bg-[#C6D600] border-2 border-[#0B0F1A]" />
-                  <div className="w-10 h-10 rounded-full bg-[#6B7F00] border-2 border-[#0B0F1A]" />
-                  <div className="w-10 h-10 rounded-full bg-[#3F4A00] border-2 border-[#0B0F1A]" />
+              {/* Social Proof */}
+              <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-4">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
+                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.8 }}>+2.500 clientes aprovados</span>
                 </div>
-                <p className="text-sm text-[#A0A0A0]" style={{ fontWeight: 400 }}>
-                  <span className="text-[#C6D600] font-semibold">+2.500</span> clientes já aprovados
-                </p>
+                <div className="hidden lg:block w-1 h-1 rounded-full bg-[#C6D600]/40" />
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
+                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.8 }}>resposta em até 2 minutos</span>
+                </div>
+                <div className="hidden lg:block w-1 h-1 rounded-full bg-[#C6D600]/40" />
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
+                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.8 }}>sem burocracia</span>
+                </div>
               </div>
             </div>
           </div>
