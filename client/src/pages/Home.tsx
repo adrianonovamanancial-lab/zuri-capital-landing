@@ -45,20 +45,20 @@ export default function Home() {
               </CTAButton>
 
               {/* Social Proof */}
-              <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-4">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
-                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.8 }}>+2.500 clientes aprovados</span>
+              <div className="flex flex-col lg:flex-row lg:items-center gap-2.5 lg:gap-3.5">
+                <div className="flex items-center gap-2.5">
+                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={16} />
+                  <span className="text-xs" style={{ fontWeight: 400, opacity: 0.8 }}>+2.500 clientes aprovados</span>
                 </div>
                 <div className="hidden lg:block w-1 h-1 rounded-full bg-[#C6D600]/40" />
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
-                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.8 }}>resposta em até 2 minutos</span>
+                <div className="flex items-center gap-2.5">
+                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={16} />
+                  <span className="text-xs" style={{ fontWeight: 400, opacity: 0.8 }}>resposta em até 2 minutos</span>
                 </div>
                 <div className="hidden lg:block w-1 h-1 rounded-full bg-[#C6D600]/40" />
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
-                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.8 }}>sem burocracia</span>
+                <div className="flex items-center gap-2.5">
+                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={16} />
+                  <span className="text-xs" style={{ fontWeight: 400, opacity: 0.8 }}>sem burocracia</span>
                 </div>
               </div>
             </div>
