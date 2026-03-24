@@ -52,7 +52,7 @@ export default function Home() {
                 <div className="hidden lg:block w-1.5 h-1.5 rounded-full bg-[#C6D600]/60" />
                 <div className="flex items-center gap-3">
                   <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
-                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.9 }}>resposta em até 2 minutos</span>
+                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.9 }}>resposta imediata</span>
                 </div>
                 <div className="hidden lg:block w-1.5 h-1.5 rounded-full bg-[#C6D600]/60" />
                 <div className="flex items-center gap-3">
@@ -209,6 +209,30 @@ export default function Home() {
                 <p className="text-[#A0A0A0] ml-9" style={{ fontWeight: 400 }}>
                   Infraestrutura de classe empresarial com certificações internacionais.
                 </p>
+              </div>
+            </div>
+
+            {/* Stats Section */}
+            <div className="mt-16 pt-16 border-t border-[#C6D600]/20">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-[#C6D600] mb-2" style={{ fontWeight: 700, letterSpacing: '-0.5px' }}>
+                    +2.500
+                  </div>
+                  <p className="text-[#A0A0A0] text-sm" style={{ fontWeight: 400 }}>clientes aprovados</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-[#C6D600] mb-2" style={{ fontWeight: 700, letterSpacing: '-0.5px' }}>
+                    +R$ 12M
+                  </div>
+                  <p className="text-[#A0A0A0] text-sm" style={{ fontWeight: 400 }}>liberados</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-[#C6D600] mb-2" style={{ fontWeight: 700, letterSpacing: '-0.5px' }}>
+                    +98%
+                  </div>
+                  <p className="text-[#A0A0A0] text-sm" style={{ fontWeight: 400 }}>de satisfação</p>
+                </div>
               </div>
             </div>
           </div>

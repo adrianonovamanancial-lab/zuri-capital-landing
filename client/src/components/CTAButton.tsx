@@ -15,7 +15,7 @@ export default function CTAButton({
   size = 'md',
   className = '',
 }: CTAButtonProps) {
-  const baseClasses = 'font-bold rounded-[10px] transition-all duration-300 ease-out active:scale-95 font-mono w-fit hover:scale-[1.03] shadow-[0_0_15px_rgba(198,214,0,0.15)]';
+  const baseClasses = 'font-bold rounded-[10px] transition-all duration-300 ease-out active:scale-95 font-mono hover:scale-[1.03] shadow-[0_0_15px_rgba(198,214,0,0.15)]';
 
   const variantClasses = {
     primary: 'bg-[#C6D600] hover:bg-[#B8C700] text-[#0B0F1A] hover:shadow-[0_0_25px_rgba(198,214,0,0.35)]',
@@ -25,7 +25,7 @@ export default function CTAButton({
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-7 py-3.5 text-base',
+    lg: 'px-16 py-3.5 text-base w-full lg:w-auto',
   };
 
   return (
