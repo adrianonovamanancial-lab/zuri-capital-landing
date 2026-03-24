@@ -29,9 +29,8 @@ export default function Home() {
             {/* Left: Content */}
             <div className="flex-1 space-y-8 text-center lg:text-left">
             <div className="animate-fade-in-slide-up">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6" style={{ letterSpacing: '-0.5px', fontWeight: 700 }}>
-                Simule e contrate
-                <br className="hidden lg:block" />
+              <h1 className="text-5xl lg:text-7xl font-bold leading-[1.15] mb-8" style={{ letterSpacing: '-0.5px', fontWeight: 700 }}>
+                Simule e contrate<br />
                 <span className="text-[#C6D600]">seu crédito agora</span>
               </h1>
               <p className="text-lg lg:text-xl text-[#B0B0B0] leading-relaxed max-w-2xl" style={{ fontWeight: 400, opacity: 0.85 }}>
@@ -45,20 +44,20 @@ export default function Home() {
               </CTAButton>
 
               {/* Social Proof */}
-              <div className="flex flex-col lg:flex-row lg:items-center gap-2.5 lg:gap-3.5">
-                <div className="flex items-center gap-2.5">
-                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={16} />
-                  <span className="text-xs" style={{ fontWeight: 400, opacity: 0.8 }}>+2.500 clientes aprovados</span>
+              <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-5">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
+                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.9 }}>+2.500 clientes aprovados</span>
                 </div>
-                <div className="hidden lg:block w-1 h-1 rounded-full bg-[#C6D600]/40" />
-                <div className="flex items-center gap-2.5">
-                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={16} />
-                  <span className="text-xs" style={{ fontWeight: 400, opacity: 0.8 }}>resposta em até 2 minutos</span>
+                <div className="hidden lg:block w-1.5 h-1.5 rounded-full bg-[#C6D600]/60" />
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
+                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.9 }}>resposta em até 2 minutos</span>
                 </div>
-                <div className="hidden lg:block w-1 h-1 rounded-full bg-[#C6D600]/40" />
-                <div className="flex items-center gap-2.5">
-                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={16} />
-                  <span className="text-xs" style={{ fontWeight: 400, opacity: 0.8 }}>sem burocracia</span>
+                <div className="hidden lg:block w-1.5 h-1.5 rounded-full bg-[#C6D600]/60" />
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
+                  <span className="text-sm" style={{ fontWeight: 400, opacity: 0.9 }}>sem burocracia</span>
                 </div>
               </div>
             </div>
