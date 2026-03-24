@@ -170,52 +170,40 @@ export default function Home() {
       {/* Security Section */}
       <section id="security" className="py-20 bg-[#1a1f2e] border-t border-[#C6D600]/10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <div className="hidden lg:flex justify-center">
-              <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/security-pattern-8Tz7hJ9kL2mN4pQ5rS6tU.webp"
-                alt="Segurança"
-                className="w-full max-w-md"
-              />
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-12 text-center" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
+              Segurança em <span className="text-[#C6D600]">primeiro lugar</span>
+            </h2>
 
-            {/* Content */}
-            <div>
-              <h2 className="text-4xl font-bold mb-8" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
-                Segurança em <span className="text-[#C6D600]">primeiro lugar</span>
-              </h2>
-
-              <div className="space-y-6">
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <Lock className="text-[#C6D600]" size={24} />
-                    <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Criptografia de Dados</h3>
-                  </div>
-                  <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
-                    Seus dados são protegidos com a mais alta tecnologia de criptografia do mercado.
-                  </p>
+            <div className="space-y-8">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <Lock className="text-[#C6D600]" size={24} />
+                  <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Criptografia de Dados</h3>
                 </div>
+                <p className="text-[#A0A0A0] ml-9" style={{ fontWeight: 400 }}>
+                  Seus dados são protegidos com a mais alta tecnologia de criptografia do mercado.
+                </p>
+              </div>
 
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <CheckCircle className="text-[#C6D600]" size={24} />
-                    <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Conformidade LGPD</h3>
-                  </div>
-                  <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
-                    Estamos em total conformidade com a Lei Geral de Proteção de Dados.
-                  </p>
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="text-[#C6D600]" size={24} />
+                  <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Conformidade LGPD</h3>
                 </div>
+                <p className="text-[#A0A0A0] ml-9" style={{ fontWeight: 400 }}>
+                  Estamos em total conformidade com a Lei Geral de Proteção de Dados.
+                </p>
+              </div>
 
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <Lock className="text-[#C6D600]" size={24} />
-                    <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Ambiente Seguro</h3>
-                  </div>
-                  <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
-                    Infraestrutura de classe empresarial com certificações internacionais.
-                  </p>
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <Lock className="text-[#C6D600]" size={24} />
+                  <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Ambiente Seguro</h3>
                 </div>
+                <p className="text-[#A0A0A0] ml-9" style={{ fontWeight: 400 }}>
+                  Infraestrutura de classe empresarial com certificações internacionais.
+                </p>
               </div>
             </div>
           </div>
