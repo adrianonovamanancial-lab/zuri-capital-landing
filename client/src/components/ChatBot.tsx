@@ -93,7 +93,7 @@ export default function ChatBot({ isOpen, onClose }: ChatBotProps) {
       />
 
       {/* Chat Container */}
-      <div className="relative w-full h-full md:h-auto md:w-[480px] md:rounded-2xl bg-[#1a1f2e] border border-[#C6D600]/20 flex flex-col shadow-2xl">
+      <div className="relative w-full h-full md:h-auto md:w-[480px] lg:w-[520px] lg:min-h-[520px] md:rounded-2xl bg-[#1a1f2e] border border-[#C6D600]/20 flex flex-col shadow-2xl">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-[#C6D600]/10 bg-gradient-to-r from-[#0B0F1A] to-[#1a1f2e]">
           <div className="flex items-center gap-3">

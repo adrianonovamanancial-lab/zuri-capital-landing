@@ -24,8 +24,10 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 max-w-4xl">
-          <div className="space-y-8 text-center lg:text-left">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+            {/* Left: Content */}
+            <div className="flex-1 space-y-8 text-center lg:text-left">
             <div className="animate-fade-in-slide-up">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6" style={{ letterSpacing: '-0.5px', fontWeight: 700 }}>
                 Simule e contrate
@@ -55,6 +57,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+            </div>
         </div>
 
         {/* Scroll indicator */}
