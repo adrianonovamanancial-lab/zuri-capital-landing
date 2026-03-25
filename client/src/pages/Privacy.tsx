@@ -1,12 +1,23 @@
 import Header from '@/components/Header';
+import { ArrowLeft } from 'lucide-react';
+import { useLocation } from 'wouter';
 
 export default function Privacy() {
+  const [, navigate] = useLocation();
   return (
     <div className="min-h-screen bg-[#0B0F1A] text-white">
       <Header onSimulateClick={() => {}} />
 
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-3xl">
+          <button
+            onClick={() => navigate('/')}
+            className="flex items-center gap-2 text-[#C6D600] hover:text-[#B8C700] transition-colors mb-8 font-medium"
+          >
+            <ArrowLeft size={20} />
+            Voltar
+          </button>
+
           <article className="prose prose-invert max-w-none">
             <h1 className="text-4xl font-bold mb-4" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
               Política de Privacidade
