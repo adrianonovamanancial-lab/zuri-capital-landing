@@ -25,7 +25,7 @@ export default function CTAButton({
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-16 py-3.5 text-base w-full lg:w-auto',
+    lg: 'px-16 py-3.5 text-base w-full lg:w-fit lg:max-w-md',
   };
 
   return (
