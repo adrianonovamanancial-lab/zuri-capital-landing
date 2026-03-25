@@ -30,8 +30,8 @@ export default function Home() {
             <div className="flex-1 space-y-8 text-center lg:text-left">
             <div className="animate-fade-in-slide-up">
               <h1 className="text-5xl lg:text-7xl font-bold leading-[1.15] mb-8" style={{ letterSpacing: '-0.5px', fontWeight: 700 }}>
-                Simule e contrate<br />
-                <span className="text-[#C6D600]">seu crédito agora</span>
+                Crédito consignado CLT<br />
+                com as menores <span className="text-[#C6D600]">taxas. Simule e contrate agora.</span>
               </h1>
               <p className="text-lg lg:text-xl text-[#B0B0B0] leading-relaxed max-w-2xl" style={{ fontWeight: 400, opacity: 0.85 }}>
                 Resposta imediata, sem burocracia e com aprovação rápida. Tudo 100% digital e seguro.
