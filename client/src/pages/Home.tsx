@@ -118,7 +118,9 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-bold mb-2" style={{ fontWeight: 600 }}>Faça sua simulação</h3>
                 <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
-                  Abra o chat, informe o valor que precisa e escolha o prazo. Leva menos de 2 minutos.
+                  Abra o chat, informe o valor que precisa e escolha o prazo.
+                  <br />
+                  Leva menos de 2 minutos.
                 </p>
               </div>
             </div>
@@ -138,7 +140,7 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-bold mb-2" style={{ fontWeight: 600 }}>Receba sua proposta</h3>
                 <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
-                  Veja as melhores opções de crédito com taxas e prazos personalizados para você.
+                  Analisamos seu perfil e te mostramos as melhores opções de crédito, com taxas e prazos personalizados.
                 </p>
               </div>
             </div>
@@ -156,9 +158,9 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2" style={{ fontWeight: 600 }}>Acompanhe tudo pelo app</h3>
+                <h3 className="text-xl font-bold mb-2" style={{ fontWeight: 600 }}>Formalize e receba seu crédito</h3>
                 <p className="text-[#A0A0A0]" style={{ fontWeight: 400 }}>
-                  Envie documentos, acompanhe sua aprovação e finalize a contratação com segurança.
+                  Envie seus dados pelo atendimento, finalize a contratação e receba o valor na sua conta.
                 </p>
               </div>
             </div>
@@ -239,38 +241,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App Download Section */}
-      <section className="py-20 bg-[#0B0F1A] border-t border-[#C6D600]/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
-            Baixe o app <span className="text-[#C6D600]">Zuri</span>
-          </h2>
-          <p className="text-[#A0A0A0] max-w-2xl mx-auto mb-12 text-lg" style={{ fontWeight: 400 }}>
-            O app Zuri é usado para acompanhar sua proposta, enviar documentos e finalizar sua contratação com segurança. Disponível em iOS e Android.
-          </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center gap-2 bg-white text-[#0B0F1A] font-bold px-8 py-4 rounded-lg hover:bg-[#E8E8E8] transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.38-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.38C2.79 15.25 3.51 7.59 9.05 7.31c1.35.05 2.29.89 3.04.89.9 0 2.29-1.16 3.86-1.01 1.63.15 3.17.97 3.98 2.45-3.81 2.33-3.14 7.16.27 8.96-.5 1.38-1.48 2.4-2.85 3.12z" />
-              </svg>
-              App Store
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center justify-center gap-2 bg-white text-[#0B0F1A] font-bold px-8 py-4 rounded-lg hover:bg-[#E8E8E8] transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3.609 1.814L13.792 12 3.609 22.186a1.5 1.5 0 0 0 1.06 2.561h.127c.563 0 1.084-.3 1.359-.783l10.646-11.964L5.155 1.036A1.5 1.5 0 0 0 3.609 1.814z" />
-              </svg>
-              Google Play
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-[#0B0F1A] border-t border-[#C6D600]/10 py-12">
