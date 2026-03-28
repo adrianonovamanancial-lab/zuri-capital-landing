@@ -1,4 +1,5 @@
 import React from 'react';
+import { MessageCircle } from 'lucide-react';
 
 interface CTAButtonProps {
   onClick: () => void;
@@ -6,6 +7,7 @@ interface CTAButtonProps {
   variant?: 'primary' | 'secondary';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  showIcon?: boolean;
 }
 
 export default function CTAButton({
@@ -14,6 +16,7 @@ export default function CTAButton({
   variant = 'primary',
   size = 'md',
   className = '',
+  showIcon = true,
 }: CTAButtonProps) {
   const baseClasses = 'font-bold rounded-[10px] transition-all duration-300 ease-out active:scale-95 font-mono hover:scale-[1.03] shadow-[0_0_15px_rgba(198,214,0,0.15)]';
 
@@ -31,8 +34,9 @@ export default function CTAButton({
   return (
     <button
       onClick={onClick}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className} flex items-center justify-center gap-2`}
     >
+      {showIcon && <MessageCircle size={20} />}
       {children}
     </button>
   );

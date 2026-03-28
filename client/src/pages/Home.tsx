@@ -4,14 +4,20 @@ import ChatBot from '@/components/ChatBot';
 import Header from '@/components/Header';
 import FeatureCard from '@/components/FeatureCard';
 import CTAButton from '@/components/CTAButton';
+import SimulationModal from '@/components/SimulationModal';
+import ContinueOptionsModal from '@/components/ContinueOptionsModal';
+import StickyBottomCTA from '@/components/StickyBottomCTA';
 import { CheckCircle, Lock, Smartphone, Zap } from 'lucide-react';
 
 export default function Home() {
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isSimulationModalOpen, setIsSimulationModalOpen] = useState(false);
+  const [isOptionsModalOpen, setIsOptionsModalOpen] = useState(false);
+  const [simulationData, setSimulationData] = useState<{ name: string; whatsapp: string } | null>(null);
 
   return (
-    <div className="min-h-screen bg-[#0B0F1A] text-white overflow-hidden">
-      <Header onSimulateClick={() => setIsChatOpen(true)} />
+    <div className="min-h-screen bg-[#0B0F1A] text-white overflow-hidden pb-24 lg:pb-0">
+      <Header onSimulateClick={() => setIsSimulationModalOpen(true)} />
 
       {/* Hero Section - Refined */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
@@ -39,7 +45,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-6 pt-4">
-              <CTAButton onClick={() => setIsChatOpen(true)} size="lg">
+              <CTAButton onClick={() => setIsSimulationModalOpen(true)} size="lg">
                 Simular agora
               </CTAButton>
 
@@ -167,7 +173,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
-            <CTAButton onClick={() => setIsChatOpen(true)} size="md">
+            <CTAButton onClick={() => setIsSimulationModalOpen(true)} size="md">
               Começar agora
             </CTAButton>
           </div>
@@ -293,6 +299,42 @@ export default function Home() {
 
       {/* Chat Bot */}
       <ChatBot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
+
+      {/* Simulation Modal */}
+      <SimulationModal
+        isOpen={isSimulationModalOpen}
+        onClose={() => setIsSimulationModalOpen(false)}
+        onSubmit={(data) => {
+          setSimulationData(data);
+          setIsSimulationModalOpen(false);
+          setIsOptionsModalOpen(true);
+        }}
+      />
+
+      {/* Continue Options Modal */}
+      <ContinueOptionsModal
+        isOpen={isOptionsModalOpen}
+        onClose={() => setIsOptionsModalOpen(false)}
+        onWhatsApp={() => {
+          if (simulationData) {
+            const message = `Olá! Meu nome é ${simulationData.name}. Gostaria de continuar com a simulação de crédito.`;
+            const whatsappUrl = `https://wa.me/${simulationData.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+          }
+          setIsOptionsModalOpen(false);
+        }}
+        onChat={() => {
+          setIsOptionsModalOpen(false);
+          setIsChatOpen(true);
+        }}
+        onApp={() => {
+          window.open('https://play.google.com/store/apps/details?id=com.zuricapital', '_blank');
+          setIsOptionsModalOpen(false);
+        }}
+      />
+
+      {/* Sticky Bottom CTA for Mobile */}
+      <StickyBottomCTA onClick={() => setIsSimulationModalOpen(true)} />
     </div>
   );
 }
