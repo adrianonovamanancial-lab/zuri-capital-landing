@@ -1,4 +1,4 @@
-import { X, MessageCircle, MessageSquare, Download } from 'lucide-react';
+import { X, MessageCircle, MessageSquare, Download, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface ContinueOptionsModalProps {
@@ -53,13 +53,27 @@ export default function ContinueOptionsModal({
           </Button>
 
           {/* App */}
-          <Button
-            onClick={onApp}
-            className="w-full bg-[#2a3f5f] hover:bg-[#3a4f6f] text-white font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2 border border-[#C6D600]/20"
-          >
-            <Download size={20} />
-            Baixar aplicativo
-          </Button>
+          <div>
+            <Button
+              onClick={onApp}
+              className="w-full bg-[#2a3f5f] hover:bg-[#3a4f6f] text-white font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2 border border-[#C6D600]/20"
+            >
+              <Smartphone size={20} />
+              Baixar nosso aplicativo
+            </Button>
+            <div className="flex items-center justify-center gap-3 mt-3">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                alt="Google Play" 
+                className="h-6 opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
+              />
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                alt="App Store" 
+                className="h-6 opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Footer */}
