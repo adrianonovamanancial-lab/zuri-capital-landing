@@ -171,12 +171,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <div className="mt-12 text-center">
-            <CTAButton onClick={() => setIsSimulationModalOpen(true)} size="md">
-              Começar agora
-            </CTAButton>
-          </div>
         </div>
       </section>
 

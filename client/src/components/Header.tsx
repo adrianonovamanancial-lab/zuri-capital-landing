@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 
 interface HeaderProps {
   onSimulateClick: () => void;
@@ -33,9 +33,10 @@ export default function Header({ onSimulateClick }: HeaderProps) {
           </a>
           <button
             onClick={onSimulateClick}
-            className="bg-[#C6D600] hover:bg-[#B8C700] text-[#0B0F1A] font-bold px-6 py-2 rounded-lg transition-all duration-300 ease-out text-sm"
+            className="bg-[#C6D600] hover:bg-[#B8C700] text-[#0B0F1A] font-bold px-6 py-2 rounded-lg transition-all duration-300 ease-out text-sm flex items-center gap-2"
           >
-            Simular
+            <MessageCircle size={16} />
+            Começar agora
           </button>
         </nav>
 
@@ -77,9 +78,10 @@ export default function Header({ onSimulateClick }: HeaderProps) {
               onSimulateClick();
               setIsMobileMenuOpen(false);
             }}
-            className="w-full bg-[#C6D600] hover:bg-[#B8C700] text-[#0B0F1A] font-bold px-6 py-2 rounded-lg transition-all duration-300 ease-out"
+            className="w-full bg-[#C6D600] hover:bg-[#B8C700] text-[#0B0F1A] font-bold px-6 py-2 rounded-lg transition-all duration-300 ease-out flex items-center justify-center gap-2"
           >
-            Simular agora
+            <MessageCircle size={16} />
+            Começar agora
           </button>
         </div>
       )}
