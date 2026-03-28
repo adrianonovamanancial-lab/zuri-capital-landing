@@ -61,16 +61,16 @@ export default function ContinueOptionsModal({
               <Smartphone size={20} />
               Baixar nosso aplicativo
             </Button>
-            <div className="flex items-center justify-center gap-3 mt-3">
+            <div className="flex items-center justify-center gap-4 mt-4 w-full">
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
                 alt="Google Play" 
-                className="h-6 opacity-60"
+                className="h-10 opacity-100"
               />
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
                 alt="App Store" 
-                className="h-6 opacity-60"
+                className="h-10 opacity-100"
               />
             </div>
           </div>
