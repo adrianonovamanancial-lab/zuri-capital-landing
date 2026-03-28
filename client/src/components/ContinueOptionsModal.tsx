@@ -65,12 +65,12 @@ export default function ContinueOptionsModal({
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
                 alt="Google Play" 
-                className="h-6 opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
+                className="h-6 opacity-60"
               />
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
                 alt="App Store" 
-                className="h-6 opacity-70 hover:opacity-100 transition-opacity cursor-pointer"
+                className="h-6 opacity-60"
               />
             </div>
           </div>
