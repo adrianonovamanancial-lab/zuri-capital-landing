@@ -44,7 +44,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-6 pt-4">
+            <div className="flex flex-col gap-6 pt-4 hidden lg:flex">
               <CTAButton onClick={() => setIsSimulationModalOpen(true)} size="lg">
                 Simular agora
               </CTAButton>
