@@ -67,6 +67,17 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
     }, 300);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent, isLastField: boolean) => {
+    if (e.key === 'Enter' && isLastField) {
+      e.preventDefault();
+      if (step === 1) {
+        handleStep1Submit(e as any);
+      } else if (step === 2) {
+        handleStep2Submit(e as any);
+      }
+    }
+  };
+
   const handleStep2Submit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -123,12 +134,8 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
               {step === 1 ? 'Inicie sua simulação' : 'Agora vamos buscar as melhores ofertas'}
             </h2>
             {/* Indicador de progresso */}
-            <div className="flex items-center gap-2 text-xs text-[#B0B0B0]">
-              <div className="flex items-center gap-1">
-                <div className={`w-2 h-2 rounded-full transition-all ${step >= 1 ? 'bg-[#C6D600]' : 'bg-[#444]'}`} />
-                <div className={`w-8 h-px transition-all ${step >= 2 ? 'bg-[#C6D600]' : 'bg-[#444]'}`} />
-                <div className={`w-2 h-2 rounded-full transition-all ${step >= 2 ? 'bg-[#C6D600]' : 'bg-[#444]'}`} />
-              </div>
+            <div className="flex items-center gap-2 text-xs text-[#B0B0B0] mb-2">
+              <span className={`transition-colors ${step >= 1 ? 'text-[#C6D600]' : 'text-[#666]'}`}>●</span>
               <span>Etapa {step} de 2</span>
             </div>
           </div>
@@ -172,15 +179,22 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
                   type="tel"
                   value={whatsapp}
                   onChange={(e) => setWhatsapp(formatWhatsApp(e.target.value))}
-                  placeholder="(11) 99999-9999"
+                  onKeyDown={(e) => handleKeyDown(e, true)}
+                  placeholder="Seu WhatsApp com DDD"
                   className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#C6D600]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#C6D600] transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
 
-              {/* Microcopy */}
-              <p className="text-xs text-[#B0B0B0] leading-relaxed">
-                Seus dados são utilizados apenas para dar continuidade ao seu atendimento
+              {/* Helper */}
+              <p className="text-xs text-[#B0B0B0] flex items-center gap-1">
+                <Lock size={12} />
+                Seus dados são protegidos e usados apenas para atendimento
+              </p>
+
+              {/* Microcopy legal */}
+              <p className="text-xs text-[#888] leading-relaxed">
+                Utilizamos suas informações apenas para dar continuidade ao seu atendimento
               </p>
 
               {/* Button */}
@@ -190,7 +204,7 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
                 className="w-full bg-[#C6D600] hover:bg-[#D4E600] text-black font-semibold py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 <MessageCircle size={18} />
-                {isSubmitting ? 'Enviando...' : 'Continuar'}
+                {isSubmitting ? 'Enviando...' : 'Quero simular agora'}
               </Button>
             </form>
           ) : (
@@ -214,7 +228,7 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
                 />
               </div>
 
-              {/* Microcopy CPF */}
+              {/* Helper CPF */}
               <p className="text-xs text-[#B0B0B0] flex items-center gap-1">
                 <Lock size={12} />
                 Seus dados são protegidos e usados apenas para análise de crédito
@@ -229,13 +243,14 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
                   type="text"
                   value={cep}
                   onChange={(e) => setCep(formatCEP(e.target.value))}
+                  onKeyDown={(e) => handleKeyDown(e, true)}
                   placeholder="00000-000"
                   className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#C6D600]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#C6D600] transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
 
-              {/* Microcopy final */}
+              {/* Trust message */}
               <p className="text-xs text-[#B0B0B0]">
                 Sem impacto no seu score
               </p>
