@@ -16,6 +16,50 @@ const LOG_DIR = path.join(PROJECT_ROOT, ".manus-logs");
 const MAX_LOG_SIZE_BYTES = 1 * 1024 * 1024; // 1MB per log file
 const TRIM_TARGET_BYTES = Math.floor(MAX_LOG_SIZE_BYTES * 0.6); // Trim to 60% to avoid constant re-trimming
 
+// =============================================================================
+// Storage Proxy Plugin - Serves /manus-storage/ paths from Forge
+// =============================================================================
+function vitePluginStorageProxy(): Plugin {
+  return {
+    name: "manus-storage-proxy",
+    configureServer(server: ViteDevServer) {
+      server.middlewares.use("/manus-storage", async (req, res) => {
+        const key = req.url?.replace(/^\//, "");
+        if (!key) {
+          res.writeHead(400, { "Content-Type": "text/plain" });
+          res.end("Missing storage key");
+          return;
+        }
+        const forgeBaseUrl = (process.env.BUILT_IN_FORGE_API_URL || "").replace(/\/+$/, "");
+        const forgeKey = process.env.BUILT_IN_FORGE_API_KEY;
+        if (!forgeBaseUrl || !forgeKey) {
+          res.writeHead(500, { "Content-Type": "text/plain" });
+          res.end("Storage proxy not configured");
+          return;
+        }
+        try {
+          const forgeUrl = new URL("v1/storage/presign/get", forgeBaseUrl + "/");
+          forgeUrl.searchParams.set("path", key);
+          const forgeResp = await fetch(forgeUrl, {
+            headers: { Authorization: `Bearer ${forgeKey}` },
+          });
+          if (!forgeResp.ok) {
+            res.writeHead(502, { "Content-Type": "text/plain" });
+            res.end("Storage backend error");
+            return;
+          }
+          const { url } = (await forgeResp.json()) as { url: string };
+          res.writeHead(302, { Location: url });
+          res.end();
+        } catch (e) {
+          res.writeHead(500, { "Content-Type": "text/plain" });
+          res.end(`Proxy error: ${String(e)}`);
+        }
+      });
+    },
+  };
+}
+
 type LogSource = "browserConsole" | "networkRequests" | "sessionReplay";
 
 function ensureLogDir() {
@@ -150,7 +194,7 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
 export default defineConfig({
   plugins,
