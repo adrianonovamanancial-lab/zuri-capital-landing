@@ -30,7 +30,7 @@ export default function Privacy() {
             <div className="space-y-8 text-[#B0B0B0]" style={{ fontWeight: 400, lineHeight: 1.6 }}>
               <section>
                 <p>
-                  A MD E VEIGA SERVICOS DE COBRANCAS E INF, inscrita no CNPJ sob o nº 34.257.934/0001-25 ("Zuri Capital", "nós" ou "empresa"), tem o compromisso de proteger a privacidade e os dados pessoais dos usuários que acessam nossa plataforma.
+                  A MD E VEIGA SERVICOS DE COBRANCAS E INF, inscrita no CNPJ sob o nº 34.257.934/0001-25 ("Tengo Promotora de Crédito", "nós" ou "empresa"), tem o compromisso de proteger a privacidade e os dados pessoais dos usuários que acessam nossa plataforma.
                 </p>
                 <p>
                   Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações.
@@ -176,7 +176,7 @@ export default function Privacy() {
                 <p>
                   Empresa: MD E VEIGA SERVICOS DE COBRANCAS E INF<br />
                   CNPJ: 34.257.934/0001-25<br />
-                  E-mail: contato@zuricapital.com.br
+                  E-mail: contato@tengo.com.br
                 </p>
               </section>
 
@@ -197,7 +197,7 @@ export default function Privacy() {
       <footer className="bg-[#0B0F1A] border-t border-[#C6D600]/10 py-12">
         <div className="container mx-auto px-4 text-center">
           <p className="text-[#A0A0A0] text-sm" style={{ fontWeight: 400 }}>
-            © 2026 Zuri Capital. Todos os direitos reservados.
+            © 2026 Tengo Promotora de Crédito. Todos os direitos reservados.
           </p>
         </div>
       </footer>

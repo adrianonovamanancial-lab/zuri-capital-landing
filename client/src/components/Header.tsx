@@ -14,8 +14,8 @@ export default function Header({ onSimulateClick }: HeaderProps) {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity md:justify-start justify-center flex-1 md:flex-none">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/Group1(1)_b8172d56.png"
-            alt="Zuri Capital"
+            src="/manus-storage/tengo_97010d9b.png"
+            alt="Tengo Promotora de Crédito"
             className="h-10 w-auto"
           />
         </a>
@@ -23,7 +23,7 @@ export default function Header({ onSimulateClick }: HeaderProps) {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <a href="#features" className="text-[#A0A0A0] hover:text-[#C6D600] transition-colors text-sm">
-            Por que Zuri
+            Por que Tengo
           </a>
           <a href="#how-it-works" className="text-[#A0A0A0] hover:text-[#C6D600] transition-colors text-sm">
             Como funciona

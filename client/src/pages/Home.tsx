@@ -36,7 +36,7 @@ export default function Home() {
             <div className="flex-1 space-y-8 text-center lg:text-left">
             <div className="animate-fade-in-slide-up">
               <h1 className="text-5xl lg:text-7xl font-bold leading-[1.15] mb-8" style={{ letterSpacing: '-0.5px', fontWeight: 700 }}>
-                Crédito consignado CLT<br />
+                Crédito consignado Servidor Público e CLT<br />
                 com <span className="text-[#C6D600]">segurança e taxas reduzidas.</span>
               </h1>
               <p className="text-lg lg:text-xl text-[#B0B0B0] leading-relaxed max-w-2xl" style={{ fontWeight: 400, opacity: 0.85 }}>
@@ -83,7 +83,7 @@ export default function Home() {
       <section id="features" className="py-20 bg-[#1a1f2e] border-t border-[#C6D600]/10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
-            Por que escolher a <span className="text-[#C6D600]">Zuri Capital</span>
+            Por que escolher a <span className="text-[#C6D600]">Tengo Promotora de Crédito</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -249,8 +249,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/Group1(1)_b8172d56.png"
-                alt="Zuri Capital"
+                src="/manus-storage/tengo_97010d9b.png"
+                alt="Tengo Promotora de Crédito"
                 className="h-12 w-auto mb-4"
               />
               <p className="text-[#A0A0A0] text-sm" style={{ fontWeight: 400 }}>
@@ -285,7 +285,7 @@ export default function Home() {
 
           <div className="border-t border-[#C6D600]/10 pt-8">
             <p className="text-[#A0A0A0] text-sm text-center" style={{ fontWeight: 400 }}>
-              © 2026 Zuri Capital. Todos os direitos reservados. | Crédito responsável. Consulte sempre as condições antes de contratar.
+              © 2026 Tengo Promotora de Crédito. Todos os direitos reservados. | Crédito responsável. Consulte sempre as condições antes de contratar.
             </p>
           </div>
         </div>
