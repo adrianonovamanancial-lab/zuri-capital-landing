@@ -126,16 +126,16 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="bg-[#1a1f2e] rounded-lg shadow-2xl max-w-md w-full border border-[#C6D600]/20">
+      <div className="bg-[#1a1f2e] rounded-lg shadow-2xl max-w-md w-full border border-[#00D084]/20">
         {/* Header com indicador de etapa */}
-        <div className="flex items-center justify-between p-6 border-b border-[#C6D600]/10">
+        <div className="flex items-center justify-between p-6 border-b border-[#00D084]/10">
           <div className="flex-1">
             <h2 className="text-xl font-bold text-white mb-3">
               {step === 1 ? 'Inicie sua simulação' : 'Agora vamos buscar as melhores ofertas'}
             </h2>
             {/* Indicador de progresso */}
             <div className="flex items-center gap-2 text-xs text-[#B0B0B0] mb-2">
-              <span className={`transition-colors ${step >= 1 ? 'text-[#C6D600]' : 'text-[#666]'}`}>●</span>
+              <span className={`transition-colors ${step >= 1 ? 'text-[#00D084]' : 'text-[#666]'}`}>●</span>
               <span>Etapa {step} de 2</span>
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Seu nome"
-                  className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#C6D600]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#C6D600] transition-colors"
+                  className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#00D084]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#00D084] transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -181,7 +181,7 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
                   onChange={(e) => setWhatsapp(formatWhatsApp(e.target.value))}
                   onKeyDown={(e) => handleKeyDown(e, true)}
                   placeholder="Seu WhatsApp com DDD"
-                  className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#C6D600]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#C6D600] transition-colors"
+                  className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#00D084]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#00D084] transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -201,7 +201,7 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
               <Button
                 type="submit"
                 disabled={!name.trim() || !whatsapp.trim() || isSubmitting}
-                className="w-full bg-[#C6D600] hover:bg-[#D4E600] text-black font-semibold py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-[#00D084] hover:bg-[#00B574] text-white font-semibold py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 <MessageCircle size={18} />
                 {isSubmitting ? 'Enviando...' : 'Quero simular agora'}
@@ -223,7 +223,7 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
                   value={cpf}
                   onChange={(e) => setCpf(formatCPF(e.target.value))}
                   placeholder="000.000.000-00"
-                  className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#C6D600]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#C6D600] transition-colors"
+                  className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#00D084]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#00D084] transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -245,7 +245,7 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
                   onChange={(e) => setCep(formatCEP(e.target.value))}
                   onKeyDown={(e) => handleKeyDown(e, true)}
                   placeholder="00000-000"
-                  className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#C6D600]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#C6D600] transition-colors"
+                  className="w-full px-4 py-3 bg-[#0B0F1A] border border-[#00D084]/20 rounded-lg text-white placeholder-[#666] focus:outline-none focus:border-[#00D084] transition-colors"
                   disabled={isSubmitting}
                 />
               </div>
@@ -259,7 +259,7 @@ export default function SimulationModal({ isOpen, onClose, onSubmit }: Simulatio
               <Button
                 type="submit"
                 disabled={!cpf.trim() || !cep.trim() || isSubmitting}
-                className="w-full bg-[#C6D600] hover:bg-[#D4E600] text-black font-semibold py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-[#00D084] hover:bg-[#00B574] text-white font-semibold py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Processando...' : 'Ver ofertas'}
               </Button>

@@ -44,14 +44,14 @@
 }
 
 :root {
-  /* Zuri Capital - Dark Premium Theme */
-  --primary: #C6D600;
-  --primary-foreground: #0B0F1A;
-  --sidebar-primary: #C6D600;
-  --sidebar-primary-foreground: #0B0F1A;
-  --chart-1: #C6D600;
-  --chart-2: #6B7F00;
-  --chart-3: #3F4A00;
+  /* Tengo - Dark Premium Theme with Green Accent */
+  --primary: #00D084;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #00D084;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #00D084;
+  --chart-2: #00B574;
+  --chart-3: #008F5A;
   --chart-4: #2A2A2A;
   --chart-5: #A0A0A0;
   --radius: 0.65rem;
@@ -83,11 +83,11 @@
 }
 
 .dark {
-  /* Zuri Capital Dark Premium Colors */
-  --primary: #C6D600;
-  --primary-foreground: #0B0F1A;
-  --sidebar-primary: #C6D600;
-  --sidebar-primary-foreground: #0B0F1A;
+  /* Tengo Dark Premium Colors - Green Accent */
+  --primary: #00D084;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #00D084;
+  --sidebar-primary-foreground: #FFFFFF;
   
   /* Dark background with subtle blue gradient */
   --background: #0B0F1A;
@@ -110,22 +110,22 @@
   --destructive-foreground: #FFFFFF;
   
   /* Borders and inputs */
-  --border: rgba(198, 214, 0, 0.1);
-  --input: rgba(198, 214, 0, 0.05);
-  --ring: #C6D600;
+  --border: rgba(0, 208, 132, 0.1);
+  --input: rgba(0, 208, 132, 0.05);
+  --ring: #00D084;
   
   /* Sidebar */
-  --chart-1: #C6D600;
-  --chart-2: #6B7F00;
-  --chart-3: #3F4A00;
+  --chart-1: #00D084;
+  --chart-2: #00B574;
+  --chart-3: #008F5A;
   --chart-4: #2A2A2A;
   --chart-5: #A0A0A0;
   --sidebar: #0B0F1A;
   --sidebar-foreground: #E8E8E8;
-  --sidebar-accent: #C6D600;
-  --sidebar-accent-foreground: #0B0F1A;
-  --sidebar-border: rgba(198, 214, 0, 0.1);
-  --sidebar-ring: #C6D600;
+  --sidebar-accent: #00D084;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(0, 208, 132, 0.1);
+  --sidebar-ring: #00D084;
 }
 
 @layer base {
@@ -221,16 +221,16 @@
     @apply bg-white/10 backdrop-blur-md border border-white/20;
   }
 
-  /* Neon green glow effect */
+  /* Premium green glow effect */
   .glow-neon {
-    @apply shadow-[0_0_20px_rgba(198,214,0,0.3)];
+    @apply shadow-[0_0_20px_rgba(0,208,132,0.3)];
   }
 
 
 
-  /* Primary button with neon green */
+  /* Primary button with premium green */
   .btn-primary {
-    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out hover:shadow-[0_0_20px_rgba(198,214,0,0.4)] active:scale-95;
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out hover:shadow-[0_0_20px_rgba(0,208,132,0.4)] active:scale-95;
   }
 
   /* Secondary button */
@@ -241,5 +241,18 @@
   /* Geometric line separator */
   .line-separator {
     @apply h-1 bg-gradient-to-r from-transparent via-primary to-transparent;
+  }
+  
+  /* Accent color utilities for Tengo green */
+  .text-accent-tengo {
+    @apply text-[#00D084];
+  }
+  
+  .bg-accent-tengo {
+    @apply bg-[#00D084];
+  }
+  
+  .border-accent-tengo {
+    @apply border-[#00D084];
   }
 }

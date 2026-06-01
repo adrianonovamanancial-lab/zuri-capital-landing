@@ -93,9 +93,9 @@ export default function ChatBot({ isOpen, onClose }: ChatBotProps) {
       />
 
       {/* Chat Container */}
-      <div className="relative w-full h-full md:h-auto md:w-[480px] lg:w-[520px] lg:min-h-[520px] md:rounded-2xl bg-[#1a1f2e] border border-[#C6D600]/20 flex flex-col shadow-2xl">
+      <div className="relative w-full h-full md:h-auto md:w-[480px] lg:w-[520px] lg:min-h-[520px] md:rounded-2xl bg-[#1a1f2e] border border-[#00D084]/20 flex flex-col shadow-2xl">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-[#C6D600]/10 bg-gradient-to-r from-[#0B0F1A] to-[#1a1f2e]">
+        <div className="flex items-center justify-between p-6 border-b border-[#00D084]/10 bg-gradient-to-r from-[#0B0F1A] to-[#1a1f2e]">
           <div className="flex items-center gap-3">
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/marcia-avatar-bZfMiSurE3vGkugSabCTWe.webp"
@@ -127,7 +127,7 @@ export default function ChatBot({ isOpen, onClose }: ChatBotProps) {
               <div
                 className={`max-w-sm px-4 py-3 rounded-2xl ${
                   message.sender === 'user'
-                    ? 'bg-[#C6D600] text-[#0B0F1A] rounded-br-none'
+                    ? 'bg-[#00D084] text-white rounded-br-none'
                     : 'bg-[#2A2A2A] text-[#E8E8E8] rounded-bl-none'
                 }`}
               >
@@ -140,9 +140,9 @@ export default function ChatBot({ isOpen, onClose }: ChatBotProps) {
             <div className="flex justify-start">
               <div className="bg-[#2A2A2A] text-[#E8E8E8] px-4 py-3 rounded-2xl rounded-bl-none">
                 <div className="flex gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#C6D600] animate-bounce" />
-                  <div className="w-2 h-2 rounded-full bg-[#C6D600] animate-bounce" style={{ animationDelay: '0.1s' }} />
-                  <div className="w-2 h-2 rounded-full bg-[#C6D600] animate-bounce" style={{ animationDelay: '0.2s' }} />
+                  <div className="w-2 h-2 rounded-full bg-[#00D084] animate-bounce" />
+                  <div className="w-2 h-2 rounded-full bg-[#00D084] animate-bounce" style={{ animationDelay: '0.1s' }} />
+                  <div className="w-2 h-2 rounded-full bg-[#00D084] animate-bounce" style={{ animationDelay: '0.2s' }} />
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function ChatBot({ isOpen, onClose }: ChatBotProps) {
         {/* Input */}
         <form
           onSubmit={handleSendMessage}
-          className="p-6 border-t border-[#C6D600]/10 bg-[#1a1f2e]"
+          className="p-6 border-t border-[#00D084]/10 bg-[#1a1f2e]"
         >
           <div className="flex gap-2">
             <input
@@ -162,14 +162,14 @@ export default function ChatBot({ isOpen, onClose }: ChatBotProps) {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Digite sua mensagem..."
-              className="flex-1 bg-[#2A2A2A] text-[#E8E8E8] placeholder-[#A0A0A0] px-4 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-[#C6D600]/50 transition-all duration-300 ease-out"
+              className="flex-1 bg-[#2A2A2A] text-[#E8E8E8] placeholder-[#A0A0A0] px-4 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-[#00D084]/50 transition-all duration-300 ease-out"
               style={{ fontWeight: 400 }}
               disabled={isLoading}
             />
             <Button
               type="submit"
               disabled={!input.trim() || isLoading}
-              className="bg-[#C6D600] hover:bg-[#B8C700] text-[#0B0F1A] rounded-full p-2 h-auto transition-all duration-300 ease-out disabled:opacity-50"
+              className="bg-[#00D084] hover:bg-[#00B574] text-white rounded-full p-2 h-auto transition-all duration-300 ease-out disabled:opacity-50"
             >
               <Send size={18} />
             </Button>

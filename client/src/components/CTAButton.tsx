@@ -18,11 +18,11 @@ export default function CTAButton({
   className = '',
   showIcon = true,
 }: CTAButtonProps) {
-  const baseClasses = 'font-bold rounded-[10px] transition-all duration-300 ease-out active:scale-95 font-mono hover:scale-[1.03] shadow-[0_0_15px_rgba(198,214,0,0.15)]';
+  const baseClasses = 'font-bold rounded-[10px] transition-all duration-300 ease-out active:scale-95 font-mono hover:scale-[1.03] shadow-[0_0_15px_rgba(0,208,132,0.15)]';
 
   const variantClasses = {
-    primary: 'bg-[#C6D600] hover:bg-[#B8C700] text-[#0B0F1A] hover:shadow-[0_0_25px_rgba(198,214,0,0.35)]',
-    secondary: 'bg-[#2A2A2A] hover:bg-[#3A3A3A] text-[#E8E8E8] hover:shadow-[0_0_15px_rgba(198,214,0,0.1)]',
+    primary: 'bg-[#00D084] hover:bg-[#00B574] text-white hover:shadow-[0_0_25px_rgba(0,208,132,0.35)]',
+    secondary: 'bg-[#2A2A2A] hover:bg-[#3A3A3A] text-[#E8E8E8] hover:shadow-[0_0_15px_rgba(0,208,132,0.1)]',
   };
 
   const sizeClasses = {

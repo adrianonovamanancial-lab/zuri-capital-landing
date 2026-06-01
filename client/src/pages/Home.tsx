@@ -37,14 +37,14 @@ export default function Home() {
             <div className="animate-fade-in-slide-up">
               <h1 className="text-5xl lg:text-7xl font-bold leading-[1.15] mb-8" style={{ letterSpacing: '-0.5px', fontWeight: 700 }}>
                 Crédito consignado Servidor Público e CLT<br />
-                com <span className="text-[#C6D600]">segurança e taxas reduzidas.</span>
+                com <span className="text-[#00D084]">segurança e taxas reduzidas.</span>
               </h1>
               <p className="text-lg lg:text-xl text-[#B0B0B0] leading-relaxed max-w-2xl" style={{ fontWeight: 400, opacity: 0.85 }}>
                 Resposta imediata, sem burocracia e com aprovação rápida. Tudo 100% digital e seguro.
               </p>
             </div>
 
-            <div className="flex flex-col gap-6 pt-4 hidden lg:flex">
+              <div className="flex flex-col gap-6 pt-4 hidden lg:flex">
               <CTAButton onClick={() => setIsSimulationModalOpen(true)} size="lg">
                 Simular agora
               </CTAButton>
@@ -52,17 +52,17 @@ export default function Home() {
               {/* Social Proof */}
               <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-5">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
+                  <CheckCircle className="text-[#00D084] flex-shrink-0" size={18} />
                   <span className="text-sm" style={{ fontWeight: 400, opacity: 0.9 }}>+2.500 clientes aprovados</span>
                 </div>
-                <div className="hidden lg:block w-1.5 h-1.5 rounded-full bg-[#C6D600]/60" />
+                <div className="hidden lg:block w-1.5 h-1.5 rounded-full bg-[#00D084]/60" />
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
+                  <CheckCircle className="text-[#00D084] flex-shrink-0" size={18} />
                   <span className="text-sm" style={{ fontWeight: 400, opacity: 0.9 }}>resposta imediata</span>
                 </div>
-                <div className="hidden lg:block w-1.5 h-1.5 rounded-full bg-[#C6D600]/60" />
+                <div className="hidden lg:block w-1.5 h-1.5 rounded-full bg-[#00D084]/60" />
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="text-[#C6D600] flex-shrink-0" size={18} />
+                  <CheckCircle className="text-[#00D084] flex-shrink-0" size={18} />
                   <span className="text-sm" style={{ fontWeight: 400, opacity: 0.9 }}>sem burocracia</span>
                 </div>
               </div>
@@ -73,32 +73,32 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-[#C6D600]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-[#00D084]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
       </section>
 
       {/* Value Proposition */}
-      <section id="features" className="py-20 bg-[#1a1f2e] border-t border-[#C6D600]/10">
+      <section id="features" className="py-20 bg-[#1a1f2e] border-t border-[#00D084]/10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
-            Por que escolher a <span className="text-[#C6D600]">Tengo Promotora de Crédito</span>
+            Por que escolher a <span className="text-[#00D084]">Tengo Promotora de Crédito</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
-              icon={<Zap className="text-[#C6D600]" size={24} />}
+              icon={<Zap className="text-[#00D084]" size={24} />}
               title="Aprovação Rápida"
               description="Resposta em minutos. Sem esperas, sem burocracia. Você sabe na hora se foi aprovado."
             />
             <FeatureCard
-              icon={<Smartphone className="text-[#C6D600]" size={24} />}
+              icon={<Smartphone className="text-[#00D084]" size={24} />}
               title="100% Digital"
               description="Tudo pelo app. Simule, envie documentos e finalize sua contratação sem sair de casa."
             />
             <FeatureCard
-              icon={<CheckCircle className="text-[#C6D600]" size={24} />}
+              icon={<CheckCircle className="text-[#00D084]" size={24} />}
               title="Sem Burocracia"
               description="Processo simplificado. Menos documentos, menos etapas. Apenas o essencial."
             />
@@ -110,14 +110,14 @@ export default function Home() {
       <section id="how-it-works" className="py-20 bg-[#0B0F1A]">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
-            Como <span className="text-[#C6D600]">funciona</span>
+            Como <span className="text-[#00D084]">funciona</span>
           </h2>
 
           <div className="max-w-3xl mx-auto space-y-8">
             {/* Step 1 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#C6D600] text-[#0B0F1A] font-bold text-lg">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#00D084] text-white font-bold text-lg">
                   1
                 </div>
               </div>
@@ -133,13 +133,13 @@ export default function Home() {
 
             {/* Divider */}
             <div className="h-8 flex justify-center">
-              <div className="w-1 bg-gradient-to-b from-[#C6D600] to-transparent" />
+              <div className="w-1 bg-gradient-to-b from-[#00D084] to-transparent" />
             </div>
 
             {/* Step 2 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#C6D600] text-[#0B0F1A] font-bold text-lg">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#00D084] text-white font-bold text-lg">
                   2
                 </div>
               </div>
@@ -153,13 +153,13 @@ export default function Home() {
 
             {/* Divider */}
             <div className="h-8 flex justify-center">
-              <div className="w-1 bg-gradient-to-b from-[#C6D600] to-transparent" />
+              <div className="w-1 bg-gradient-to-b from-[#00D084] to-transparent" />
             </div>
 
             {/* Step 3 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#C6D600] text-[#0B0F1A] font-bold text-lg">
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-[#00D084] text-white font-bold text-lg">
                   3
                 </div>
               </div>
@@ -175,17 +175,17 @@ export default function Home() {
       </section>
 
       {/* Security Section */}
-      <section id="security" className="py-20 bg-[#1a1f2e] border-t border-[#C6D600]/10">
+      <section id="security" className="py-20 bg-[#1a1f2e] border-t border-[#00D084]/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-center" style={{ fontWeight: 700, letterSpacing: '-0.3px' }}>
-              Segurança em <span className="text-[#C6D600]">primeiro lugar</span>
+              Segurança em <span className="text-[#00D084]">primeiro lugar</span>
             </h2>
 
             <div className="space-y-8">
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <Lock className="text-[#C6D600]" size={24} />
+                  <Lock className="text-[#00D084]" size={24} />
                   <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Criptografia de Dados</h3>
                 </div>
                 <p className="text-[#A0A0A0] ml-9" style={{ fontWeight: 400 }}>
@@ -195,7 +195,7 @@ export default function Home() {
 
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <CheckCircle className="text-[#C6D600]" size={24} />
+                  <CheckCircle className="text-[#00D084]" size={24} />
                   <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Conformidade LGPD</h3>
                 </div>
                 <p className="text-[#A0A0A0] ml-9" style={{ fontWeight: 400 }}>
@@ -205,7 +205,7 @@ export default function Home() {
 
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <Lock className="text-[#C6D600]" size={24} />
+                  <Lock className="text-[#00D084]" size={24} />
                   <h3 className="text-lg font-bold" style={{ fontWeight: 600 }}>Ambiente Seguro</h3>
                 </div>
                 <p className="text-[#A0A0A0] ml-9" style={{ fontWeight: 400 }}>
@@ -215,22 +215,22 @@ export default function Home() {
             </div>
 
             {/* Stats Section */}
-            <div className="mt-16 pt-16 border-t border-[#C6D600]/20">
+            <div className="mt-16 pt-16 border-t border-[#00D084]/20">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[#C6D600] mb-2" style={{ fontWeight: 700, letterSpacing: '-0.5px' }}>
+                  <div className="text-4xl font-bold text-[#00D084] mb-2" style={{ fontWeight: 700, letterSpacing: '-0.5px' }}>
                     +2.500
                   </div>
                   <p className="text-[#A0A0A0] text-sm" style={{ fontWeight: 400 }}>clientes aprovados</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[#C6D600] mb-2" style={{ fontWeight: 700, letterSpacing: '-0.5px' }}>
+                  <div className="text-4xl font-bold text-[#00D084] mb-2" style={{ fontWeight: 700, letterSpacing: '-0.5px' }}>
                     +R$ 12M
                   </div>
                   <p className="text-[#A0A0A0] text-sm" style={{ fontWeight: 400 }}>liberados</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[#C6D600] mb-2" style={{ fontWeight: 700, letterSpacing: '-0.5px' }}>
+                  <div className="text-4xl font-bold text-[#00D084] mb-2" style={{ fontWeight: 700, letterSpacing: '-0.5px' }}>
                     +98%
                   </div>
                   <p className="text-[#A0A0A0] text-sm" style={{ fontWeight: 400 }}>de satisfação</p>
@@ -244,7 +244,7 @@ export default function Home() {
 
 
       {/* Footer */}
-      <footer className="bg-[#0B0F1A] border-t border-[#C6D600]/10 py-12">
+      <footer className="bg-[#0B0F1A] border-t border-[#00D084]/10 py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
