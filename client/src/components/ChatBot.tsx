@@ -97,9 +97,11 @@ export default function ChatBot({ isOpen, onClose }: ChatBotProps) {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-[#C6D600]/10 bg-gradient-to-r from-[#0B0F1A] to-[#1a1f2e]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C6D600] to-[#6B7F00] flex items-center justify-center">
-              <User className="text-[#0B0F1A]" size={20} />
-            </div>
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030068499/nsn32NQj46JZoJdTENEPY6/marcia-avatar-bZfMiSurE3vGkugSabCTWe.webp"
+              alt="MarcIA"
+              className="w-10 h-10 rounded-full object-cover"
+            />
             <div>
               <h3 className="text-white font-semibold text-sm" style={{ fontWeight: 600 }}>MarcIA</h3>
               <p className="text-[#A0A0A0] text-xs" style={{ fontWeight: 400 }}>Online agora</p>
