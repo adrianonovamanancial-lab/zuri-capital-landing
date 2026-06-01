@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Send, X } from 'lucide-react';
+import { Send, X, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface Message {
@@ -98,10 +98,10 @@ export default function ChatBot({ isOpen, onClose }: ChatBotProps) {
         <div className="flex items-center justify-between p-6 border-b border-[#C6D600]/10 bg-gradient-to-r from-[#0B0F1A] to-[#1a1f2e]">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C6D600] to-[#6B7F00] flex items-center justify-center">
-              <span className="text-[#0B0F1A] font-bold text-sm">Z</span>
+              <User className="text-[#0B0F1A]" size={20} />
             </div>
             <div>
-              <h3 className="text-white font-semibold text-sm" style={{ fontWeight: 600 }}>Zuri Capital</h3>
+              <h3 className="text-white font-semibold text-sm" style={{ fontWeight: 600 }}>MarcIA</h3>
               <p className="text-[#A0A0A0] text-xs" style={{ fontWeight: 400 }}>Online agora</p>
             </div>
           </div>
